@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100&display=swap');
+:root{
+    --primary-color:rgb(27, 27, 27);
+    --secondary-color:rgba(255,255,255,0.8);
+    --third-color:rgba(218, 212, 212, 0.6);
+    --four-color:rgb(49,153,94);
+    --five-color:rgba(33,147,176,1);
+    --sixth-color:rgba(33,147,176,1);
+    --seven-color:rgba(255,255,255,0.4);
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+
+
+
+.darkMode{
+    --primary-color:#fff;
+    --secondary-color:#13192C;
+    --third-color:#181E30;
+    --four-color:#fff;
+    --five-color:rgba(7,33,60,0.6);
+    --sixth-color:rgba(7,33,60,0.6);
+    --seven-color:rgba(7,33,60,0.6);
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+.container .navigation{
+    display: flex;
+    width: 85%;
+    height: 90px;
+    background-color: var(--seven-color);
+    position: absolute;
+    top: 0;
+    right: 0;
+    align-items: center;
+    z-index: 999;
+    justify-content: space-between;
+}
+.container .navigation .leftsection{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    width: 150px;
+    margin-right: 20px;
+}
+.container .navigation .search{
+    margin-left: 20px;
+    position: relative;
+    display:flex;
+    width: 550px;
+}
+.container .navigation .search input{
+    border: none;
+    background-color: var(--third-color);
+    width: 500px;
+    height: 40px;
+    border-radius: 50px;
+    padding: 5px;
+    padding-left: 50px;
+}
+.container .navigation .search span{
+    position: absolute;
+    color: var(--primary-color);
+    top: 8px;
+    left: 8px;
+}
+.container .navigation .leftsection .profileImage{
+    overflow: hidden;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+}
+.container .navigation .leftsection .profileImage img{
+    object-fit: cover;
+    height: inherit;
+    width: inherit;
+    align-self: center;
+}
+.container .navigation .leftsection .profileImage .pick{
+    display: none;
+}
+.container .navigation .leftsection .profileImage span{
+    position: absolute;
+    color: var(--primary-color);
+    cursor: pointer;
+    transform: translate(60px,45px);
+    -webkit-transform: translate(60px,45px);
+    -moz-transform: translate(60px,45px);
+    -ms-transform: translate(60px,45px);
+    -o-transform: translate(60px,45px);
+}
+.navigation .leftsection .setting span:hover{
+    color: rgb(49,153,94);
+    cursor: pointer;
+}
+.navigation .leftsection .notifications span:hover{
+    color: rgb(49,153,94);
+    cursor: pointer;
+}

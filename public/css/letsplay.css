@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100&display=swap');
+:root{
+    --primary-color:rgb(27, 27, 27);
+    --secondary-color:rgba(255,255,255,0.8);
+    --third-color:rgba(218, 212, 212, 0.6);
+    --four-color:rgb(49,153,94);
+    --five-color:rgba(33,147,176,1);
+    --sixth-color:rgba(33,147,176,1);
+    --seven-color:rgba(255,255,255,0.4);
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+.darkMode{
+    --primary-color:#fff;
+    --secondary-color:#13192C;
+    --third-color:#181E30;
+    --four-color:#fff;
+    --five-color:rgba(7,33,60,0.6);
+    --sixth-color:rgba(7,33,60,0.6);
+    --seven-color:rgba(7,33,60,0.6);
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+.letsPlay{
+    width: 50%;
+    height: 30%;
+    border-radius: 30px;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 2px;
+    position: absolute;
+    top: 65%;
+    left: 17%;
+    background-color:  var(--seven-color);
+    box-shadow: 5px 5px 13px 5px linear-gradient(180deg,transparent 0%, var(--five-color) 100%);
+}
+.letsPlayControl{
+    display: flex;
+    border-radius: 10px;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.letsPlayControl p{
+    font-size: 20px;
+    color:  var(--primary-color);
+    font-family: 'Poppins',sans-serif;
+    font-weight: bolder;
+    letter-spacing: 2px;
+}
+.letsPlayScroll{
+    width: 100%;
+    height: 280px;
+    margin-top: 20px;
+    border-radius: 10px;
+    position: relative;
+    bottom: -1px;
+    overflow-y: scroll;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+.letsPlayScroll .item{
+    display: flex;
+    align-items: center;
+    height: 70px;
+    width: 900px;
+    margin-top: 10px;
+    margin-left: 5px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 13px 5px linear-gradient(180deg,transparent 0%, var(--five-color) 100%);
+}
+.letsPlayScroll .item .itemNumber{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:  var(--primary-color);
+    width: 30px;
+    height: 70px;
+}
+.letsPlayScroll .itemArt{
+    height: 55px;
+    width: 55px;
+    position: absolute;
+    border-radius: 5px;
+    left: 30px;
+    overflow: hidden;
+    box-shadow: 5px 5px 10px 2px rgba(0,0,0,0.2);
+}
+.letsPlayScroll .itemArt img{
+    object-fit: cover;
+    height: inherit;
+    width: inherit;
+    align-self: center;
+}
+.letsPlayScroll .item .itemInfo{
+    position: absolute;
+    left:90px;
+    width: 500px;
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.letsPlayScroll .item .itemInfo .itemInfoName p{
+    width: 400px;
+    text-overflow: ellipsis;
+    margin-left: 10px;
+}
+.letsPlayScroll .item .itemInfo .itemInfoName .itemName{
+    font-size: 18px;
+    color:  var(--primary-color);
+    font-family: 'Poppins',sans-serif;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+.letsPlayScroll .item .itemInfo .itemInfoName .itemAlbum{
+    font-size: 10px;
+    font-family: 'Poppins',sans-serif;
+    color:  var(--primary-color);
+    letter-spacing: 1px;
+    padding-left: 10px;
+    font-weight: 500;
+}
+.letsPlayScroll .item .itemInfo .visual1{
+    width: 45px;
+    height: 41px;
+    display: flex;
+    justify-content: center;
+    margin-left: 430px;
+    margin-top: -30px;
+    align-items: center;
+}
+.letsPlayScroll .item .itemInfo .visual1 .visualBars1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -20px;
+}
+.letsPlayScroll .item .itemInfo .visual1 .visualBars1 .bar1:not(:nth-child(1)){
+    margin-left: 3px;
+}
+.letsPlayScroll .item .itemInfo .visual1 .visualBars1 .bar1{
+    height: 40px;
+    width: 5px;
+    background-color: black;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+.letsPlayScroll .item .itemInfo .visual1 .visualBars1 .bar1.anime{
+    height: 40px;
+    width: 5px;
+    background-color: black;
+    border-radius: 20px;
+    animation: shape 0.5s infinite;
+}
+.letsPlayScroll .item .itemInfo .visual1 .visualBars1 .bar1.anime:nth-child(1){
+    animation-delay: -0.8s;
+}
+.letsPlayScroll .item .itemInfo .visual1 .visualBars1 .bar1.anime:nth-child(2){
+    animation-delay: -0.4s;
+}
+.letsPlayScroll .item .itemInfo .visual1 .visualBars1 .bar1.anime:nth-child(3){
+    animation-delay: -0.2s;
+}
+.letsPlayScroll .item .itemInfo .visual1 .visualBars1 .bar1.anime:nth-child(4){
+    animation-delay: 0.0s;
+}
+@keyframes shape {
+    50%{height: 10px;background-color: rgb(49,153,94);
+    box-shadow: 5px 5px 15px 2px rgba(49,153,94,0.4);}
+}
+.letsPlayScroll .item .itemInfo .visual1 .visualBars1 .bar1:hover{
+    background-color: rgb(49,153,94);
+    box-shadow: 5px 5px 15px 2px rgba(49,153,94,0.4);
+}
+.letsPlayScroll .item .itemDuration{
+    position: absolute;
+    left:590px;
+    width: 50px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.letsPlayScroll .item .itemDuration p{
+    font-size: 20px;
+    font-family: 'Poppins',sans-serif;
+    color:  var(--primary-color);
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+.letsPlayScroll .item .itembtn{
+    position: absolute;
+    right:55px;
+    width: 50px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    justify-content: center;
+}
+.letsPlayScroll .item .itembtn span{
+    border-radius: 50%;
+    height: 35px;
+    width: 35px;
+    display: grid;
+    cursor: pointer;
+    place-content: center;
+    background-color: rgb(49,153,94);
+    color: #fff;
+}
+.letsPlayScroll .item .itemDetails{
+    position: absolute;
+    right:-1px;
+    width: 60px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.letsPlayScroll .item .itemDetails span{
+    font-size: 30px;
+    color:  var(--primary-color);
+}

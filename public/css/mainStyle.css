@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+:root{
+    --primary-color:rgb(27, 27, 27);
+    --secondary-color:rgba(255,255,255,0.8);
+    --third-color:rgba(218, 212, 212, 0.6);
+    --four-color:rgb(49,153,94);
+    --five-color:rgba(33,147,176,1);
+    --sixth-color:rgba(33,147,176,1);
+    --seven-color:rgba(255,255,255,0.4);
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+
+
+
+
+.darkMode{
+    --primary-color:#fff;
+    --secondary-color:#13192C;
+    --third-color:#181E30;
+    --four-color:#fff;
+    --five-color:rgba(7,33,60,0.6);
+    --sixth-color:rgba(7,33,60,0.6);
+    --seven-color:rgba(7,33,60,0.6);
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+.container{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    box-sizing: border-box;
+}
+.container .sidebar{
+    border: none;
+    z-index: 999;
+    position: absolute;
+    background-color: var(--seven-color);
+    height: 90vh;
+    top: 0;
+    width: 15%;
+    left: 0;
+}
+.container .sidebar .title{
+    width: 100%;
+    height: 70px;
+    display: grid;
+    place-content: center;
+    font-size: 30px;
+    font-weight: 200;
+    color:var(--primary-color);
+    letter-spacing: 2px;
+    transition: all 1s;
+    cursor: pointer;
+}
+.container .sidebar .title:hover{
+    color: #1EB955;
+    text-shadow: 2px 2px 4px rgba(49,153,94,1);
+}
+.container .sidebar .title a{
+    text-decoration: none;
+    color:var(--primary-color);
+}
+.container .sidebar .title a:hover{
+    color: #1EB955;
+    text-shadow: 2px 2px 4px rgba(49,153,94,1);
+}
+.container .sidebar .sideMenu{
+    display: flex;
+    width: 100%;
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.container .sidebar .sideMenu a{
+    text-decoration: none;
+    color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    transition: all 0.5s;
+    height: 55px;
+    width: 100%;
+}
+.container .sidebar .sideMenu a::before{
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition: all 0.5s;
+    left: 0;
+}
+.container .sidebar .sideMenu a:hover::before{
+    background-image: linear-gradient(to right, rgba(49,153,94,0.4),transparent 30%);
+}
+.container .sidebar .sideMenu a::after{
+    content: '';
+    height: 100%;
+    width: 5px;
+    position: absolute;
+    transition: all 0.5s;
+    left: 0;
+    border-radius: 5px;
+}
+.container .sidebar .sideMenu a:hover::after{
+    background-color:#2a8d4b;
+}
+.container .sidebar .sideMenu a:hover{
+    color: #1EB955;
+}
+.container .sidebar .sideMenu a span{
+    position: absolute;
+    left: 40px;
+}
+.container .sidebar .sideMenu a p{
+    text-transform: uppercase;
+    position: relative;
+    margin-top: 5px;
+}
+.container .sidebar .sep{
+    width: 80%;
+    height: 3px;
+    background-color: #232d4e;
+    border-radius: 5px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.container .library{
+    height: 100px;
+    width: 100%;
+}
+.container .library a{
+    text-decoration: none;
+    color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50%;
+    position: relative;
+}
+.container .library a span{
+    position: absolute;
+    left: 10px;
+}
+.container .library a p{
+    text-transform: uppercase;
+    position: relative;
+    margin-top: 5px;
+    margin-left: 30px;
+}
+.container .library a::before{
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition: all 0.5s;
+    left: 0;
+}
+.container .library a:hover::before{
+    background-image: linear-gradient(to right, rgba(49,153,94,0.4),transparent 30%);
+}
+.container .library a::after{
+    content: '';
+    height: 100%;
+    width: 5px;
+    position: absolute;
+    transition: all 0.5s;
+    left: 0;
+    border-radius: 5px;
+}
+.container .library a:hover::after{
+    background-color:#2a8d4b;
+}
+.container .library a:hover{
+    color: #1EB955;
+}
+.container .title1{
+    width: 100%;
+    margin-top: 20px;
+    height: 50px;
+    display: grid;
+    place-content: center;
+    color: var(--primary-color);
+    font-size: larger;
+    position: relative;
+    text-transform: uppercase;
+}
+.container .title1:hover{
+    color: #1EB955;
+    text-shadow: 2px 2px 4px rgba(49,153,94,1);
+}
+.container .playlist{
+    position: relative;
+    width: 100%;
+    height: 200px;
+    flex-direction: column;
+}
+.container .playlist a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    position: relative;
+    height: 50px;
+    color: var(--primary-color);
+}
+.container .playlist a span{
+    position: absolute;
+    left: 20px;
+}
+.container .playlist a p{
+    position: relative;
+    margin-left: 20px;
+    text-transform: uppercase;
+}
+.container .playlist a::before{
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition: all 0.5s;
+    left: 0;
+}
+.container .playlist a:hover::before{
+    background-image: linear-gradient(to right, rgba(49,153,94,0.4),transparent 30%);
+}
+.container .playlist a::after{
+    content: '';
+    height: 100%;
+    width: 5px;
+    position: absolute;
+    transition: all 0.5s;
+    left: 0;
+    border-radius: 5px;
+}
+.container .playlist a:hover::after{
+    background-color:#2a8d4b;
+}
+.container .playlist a:hover{
+    color: #1EB955;
+}
+.darkLightMode{
+    width: 100%;
+    height: 114px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.darkLightMode .slider{
+    width: 100px;
+    height: 40px;
+    border-radius: 50px;
+    position: absolute;
+    left: 90px;
+    top: 20px;
+    cursor: pointer;
+    border: none;
+    background-color: rgb(205, 205, 206);
+    box-shadow: 0 2px 15px 5px rgba(0,0,0,0.4);
+    transition: all 0.5s;
+}
+.darkLightMode .slider p::before{
+    content: 'Dark';
+    position: absolute;
+    color: white;
+    margin-left: 15px;
+    transition: all 0.5s;
+    top: 8px;
+}
+.darkLightMode .slider::before{
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border: none;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0 2px 15px 5px rgba(0,0,0,0.4);
+    transition: all 0.5s;
+}
+.darkLightMode input:checked+ .slider{
+    background-color: #1EB955;
+}
+.darkLightMode input:not(:checked)+ .slider p::before{
+    content: 'Light';
+    position: absolute;
+    top: 4px;
+    color: black;
+    transition: all 0.5s;
+    left: 30px;
+    margin-top: 8px;
+}
+.darkLightMode input:checked+ .slider::before{
+    transform: translate(60px);
+}
+.darkLightMode input{
+    display :none;
+}
+::-webkit-scrollbar{
+    display: none;
+}

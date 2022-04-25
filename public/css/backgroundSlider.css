@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100&display=swap');
+:root{
+    --primary-color:rgb(27, 27, 27);
+    --secondary-color:rgba(255,255,255,0.8);
+    --third-color:rgba(218, 212, 212, 0.6);
+    --four-color:rgb(49,153,94);
+    --five-color:rgba(33,147,176,1);
+    --sixth-color:rgba(33,147,176,1);
+    --seven-color:rgba(255,255,255,0.4);
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+
+
+.darkMode{
+    --primary-color:#fff;
+    --secondary-color:#13192C;
+    --third-color:#181E30;
+    --four-color:#fff;
+    --five-color:rgba(7,33,60,0.6);
+    --sixth-color:rgba(7,33,60,0.6);
+    --seven-color:rgba(7,33,60,0.6);
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+.backslide{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    z-index: -2;
+    width: 100%;
+}
+.backslide .backslideImg{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+}
+.backslide .backslideImg img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.backslide .backslideImg .colorOverlay{
+    z-index: 1;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgb(252,254,255);
+    background: linear-gradient(180deg,transparent 0%, var(--five-color) 100%);
+}
