@@ -1,0 +1,15 @@
+var artistInfo = [{artist:"Arijit Singh",artistSrc:"artistImages/arijitsingh.jpg"},
+                {artist:"Alan Walker",artistSrc:"artistImages/alan_walker.jpg"},
+                {artist:"Gavrielle",artistSrc:"artistImages/Gavrielle.jpg"},
+                {artist:"Billie Eillish",artistSrc:"artistImages/billieeillish.jpg"},
+                {artist:"Honey Singh",artistSrc:"artistImages/honeysingh.jpg"},
+                {artist:"Shreya Ghosal",artistSrc:"artistImages/shreyaGhosal.webp"},
+                {artist:"Bilal Saeed",artistSrc:"artistImages/bilalsaeed.jpg"},
+                {artist:"Asha Bhosala",artistSrc:"artistImages/AshaBhosale.jpg"},
+                {artist:"Justine Bieber",artistSrc:"artistImages/justineBieber.jpg"},
+                {artist:"Aarman Malik",artistSrc:"artistImages/aarmanMalik.jpg"},
+                {artist:"Kishor Kumar",artistSrc:"artistImages/Kishorekumar.jpg"},
+                {artist:"Lady Gaga",artistSrc:"artistImages/ladygaga.jpg"},
+                {artist:"Ankit Tiwari",artistSrc:"artistImages/ankit_tiwari.jpg"},
+                {artist:"Andrew Taggart",artistSrc:"artistImages/andrewtaggart.jpg"}
+                ]
