@@ -1,0 +1,57 @@
+ <div class="player">
+        <div class="info">
+            <div class="musicArt">
+                <img src="images/6.jpg" class="imgart">
+            </div>
+            <div class="MusicName">
+                <p class="sngName">INSECURE</p>
+                <p class="sngAlbum">Love in air</p>
+            </div>
+        </div>
+        <div class="control">
+            <div class="prev">
+                <span class="material-icons">arrow_back_ios</span>
+            </div>
+            <div class="pausePlay" onclick="playpausemusic();">
+                <script src="javascript/trendSource.js"></script>
+                <script src="javascript/artistSource.js"></script>
+                <span class="material-icons play" id="contplay">play_arrow</span>
+                <audio src="music/Maze.mp3"></audio>
+            </div>
+            <div class="next">
+                <span class="material-icons">arrow_forward_ios</span>
+            </div>
+        </div>
+        <div class="playerInfo">
+            <!--vizualiser-->
+            <div class="visual">
+                <div class="visualBars">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </div>
+
+            <!-- seekbar code -->
+            <div class="seekbar">
+                <div class="currTime">
+                    <p class="varTime">00:00</p>
+                </div>
+                <div class="ranger">
+                    <div class="seeker"></div>
+                </div>
+                <div class="dura">
+                    <p class="totalTime">03:42</p>
+                </div>
+            </div>
+            <div class="musicFunc">
+                <a href="#"><span class="material-icons">repeat</span></a>
+                <a href="#"><span class="material-icons">toc</span></a>
+            </div>
+        </div>
+            <div class="expand">
+                <input type="checkbox" id="check1" class="exp">
+                <label class="material-icons" for="check1" id="checked">expand_less</scr>
+            </div>
+    </div>

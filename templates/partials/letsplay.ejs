@@ -1,0 +1,46 @@
+<div class="letsPlay">
+    <div class="letsPlayControl">
+        <p>Lets Play</p>
+    </div>
+    <div class="letsPlayScroll">
+        <script src="artistSource.js"></script>
+        <script>
+            var items = "";
+            var duration = "3:45";
+            for(var i=0;i<songList.length;i++){
+                items = items + `<div class="item">
+                            <div class="itemNumber">
+                                <p>${i+1}</p>
+                            </div>
+                            <div class="itemArt" onclick="buzz(${i});">
+                                <img src=${songList[i].src} alt="">
+                            </div>
+                            <div class="itemInfo">
+                                <div class="itemInfoName">
+                                    <p class="itemName">${songList[i].name}</p>
+                                    <p class="itemAlbum">${songList[i].album}</p>
+                                </div>
+                                <div class="visual1">
+                                    <div class="visualBars1">
+                                        <div class="bar1" id=${"barsvisual"+i}></div>
+                                        <div class="bar1" id=${"barsvisual"+i}></div>
+                                        <div class="bar1" id=${"barsvisual"+i}></div>
+                                        <div class="bar1" id=${"barsvisual"+i}></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="itemDuration">
+                                <p class="itemdur" id=${"itemrange"+i}>${duration}</p>
+                            </div>
+                            <div class="itembtn" onclick="buzz(${i});">
+                                <span class="material-icons play" id=${"letsPlayicon"+i}>play_arrow</span>
+                            </div>
+                            <div class="itemDetails">
+                                <span class="material-icons-outlined">info</span>
+                            </div>
+                        </div>`
+            }
+            document.querySelector(".letsPlayScroll").innerHTML = items;
+        </script>
+    </div>
+</div>

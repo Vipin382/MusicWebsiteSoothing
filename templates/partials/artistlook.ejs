@@ -1,0 +1,25 @@
+<div class="RecommendedArtist">
+        <div class="recommendArtistTitle">
+            <p>Recommended Artist</p>
+        </div>
+        <div class="recommendedArtistRow">
+            <script src="javascript/artistSource.js"></script>
+            <script>
+                var list = "";
+                for(var i=0;i<artistInfo.length;i=i+2){
+                    list = list + `<div class="recommendedArt">
+                                        <div class="recommendedImage1">
+                                            <img src=${artistInfo[i].artistSrc} alt="">
+                                            <div class="Artistinfo1"><p>${artistInfo[i].artist}</p></div>
+                                        </div>
+                                        <div class="recommendedImage2">
+                                            <img src=${artistInfo[i+1].artistSrc} alt="">
+                                            <div class="Artistinfo2"><p>${artistInfo[i+1].artist}</p></div>
+                                        </div>
+                                    </div>`;
+                }
+                document.querySelector(".recommendedArtistRow").innerHTML = list;
+            </script>
+        </div>
+    </div>
+</div>

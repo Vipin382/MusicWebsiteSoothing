@@ -1,0 +1,95 @@
+<div class="SearchingBar">
+            <input id="searchbar" onkeyup="search_song()" type="text" name="search" placeholder="Search Songs..">
+            <span class="material-icons-outlined">search</span>
+        </div>
+        <div class="bodysrch">
+            <div class="songSearch">
+                <div class="songSearchTitle"><p class="title">Songs</p></div>
+                <div class="songsearchList">
+                    <ol class="songlist">
+                        <script src="javascript/trendSource.js"></script>
+                        <script>
+                            var sngList = "";
+                            var time = "3:42";
+                            for(var i=0;i<songList.length;i++){
+                                sngList = sngList+ `<li class="sng" onclick="buzz(${i});">
+                                                        <div class="sngart" id="sngsarts">
+                                                            <img src=${songList[i].src} alt="">
+                                                        </div>
+                                                        <div class="sngInfo">
+                                                            <p class="songInfo">${songList[i].name}</p>
+                                                            <p>${songList[i].artist}</p>
+                                                        </div>
+                                                        <div class="sngtime">
+                                                            <p>${time}</p>
+                                                        </div>
+                                                        <div class="fav">
+                                                            <span class="material-icons-outlined">favorite_border</span>
+                                                        </div>
+                                                    </li>`;
+                            }
+                            document.querySelector(".songlist").innerHTML = sngList;
+                        </script>
+                    </ol>
+                </div>
+            </div>
+            <script>
+                function look(){search_song();search_artist();}
+                function search_song() {
+                    var item,item1,txtValue,txtValue1;
+                    let input = document.getElementById('searchbar').value;
+                    input=input.toUpperCase();
+                    let x = document.getElementsByClassName('songlist');
+                    let li = document.getElementsByTagName("li");
+                    for (var i = 0; i < li.length; i++) {
+                       item = li[i].getElementsByTagName("p")[0];
+                       txtValue = item.textContent||item.innerText;
+                       if (txtValue.toUpperCase().indexOf(input) > -1) {
+                            li[i].style.display = "";
+                        } else {
+                            li[i].style.display = "none";
+                        }
+                    }
+                }
+            </script>
+            <div class="artistSearching">
+                <div class="artistSearchTitle"><p class="title">Artists</p></div>
+                <div class="artistsearchList">
+                    <ol class="artistlist">
+                        <script src="javascript/artistSource.js"></script>
+                        <script>
+                            var artistList = "";
+                            for(var i=0;i<artistInfo.length;i++){
+                                artistList = artistList + `<li class="artistlistitem">
+                                                                <div class="artistart">
+                                                                    <img src=${artistInfo[i].artistSrc} alt="">
+                                                                </div>
+                                                                <div class="artistInfo">
+                                                                    <p class="songInfo">${artistInfo[i].artist}</p>
+                                                                    <p>Artist</p>
+                                                                </div>
+                                                            </li>`
+                            }
+                            document.querySelector(".artistlist").innerHTML = artistList;
+                        </script>
+                    </ol>
+                </div>
+            </div>
+            <script>
+                function search_artist() {
+                    var item,txtValue;
+                    let input = document.getElementById('searchbar').value;
+                    input=input.toUpperCase();
+                    let x = document.getElementsByClassName('artistlist');
+                    let li = document.getElementsByTagName("li");
+                    for (var i = 0; i < li.length; i++) {
+                       item = li[i].getElementsByTagName("p")[0];
+                       txtValue = item.textContent||item.innerText;
+                       if (txtValue.toUpperCase().indexOf(input) > -1) {
+                            li[i].style.display = "";
+                        } else {
+                            li[i].style.display = "none";
+                        }
+                    }
+                }
+            </script>

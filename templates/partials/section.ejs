@@ -1,0 +1,53 @@
+<div class="navigation">
+        <div class="search">
+            <input type="search" name="" id="" placeholder="Search for song,artist..">
+            <span class="material-icons-outlined">search</span>
+        </div>
+        <div class="leftsection">
+            <div class="setting">
+                <span class="material-icons">settings</span>
+            </div>
+            <div class="notifications">
+                <span class="material-icons">notifications</span>
+            </div>
+            <div class="profileImage">
+                <label for="profImgPick"><span class="material-icons-outlined">add_circle_outline</span></label>
+                <input type="file" accept="image/*" class="pick" id="profImgPick">
+                <img src="profileImages/1.jpg" class="profImg">
+                <script>
+                    const image_input = document.querySelector(".pick");
+                    var upload_image = "";
+                    image_input.addEventListener("change",function(){
+                        const reader = new FileReader();
+                        reader.addEventListener("load",()=>{
+                            upload_image = reader.result;
+                            document.querySelector(".profImg").src = upload_image;
+                        });
+                        reader.readAsDataURL(this.files[0]);
+                    })
+                </script>
+            </div>
+        </div>
+    </div>
+    
+    <div class="treanding">
+        <div class="treandinfo">
+            <script src="javascript/trendSource.js"></script>
+            <script>
+                var a="";
+                for(var i=0;i<songList.length;i++){
+                    a=a+`<div class="treandimgArt">
+                            <img src=${songList[i].src} alt="no preview">
+                            <div class="treandoverlay"></div>
+                            <div class="textinfo">
+                                <div class="divicon" onclick="buzz(${i});">
+                                    <span class="material-icons play" id=${"playsngs"+i}>play_arrow</span>
+                                </div>
+                                <p class="treandname">${songList[i].name}</p>
+                            </div>
+                        </div>`;
+                }
+                document.querySelector(".treandinfo").innerHTML = a;
+            </script>
+        </div>
+    </div>
