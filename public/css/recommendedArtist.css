@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100&display=swap');
+:root{
+    --primary-color:rgb(27, 27, 27);
+    --secondary-color:rgba(255,255,255,0.8);
+    --third-color:rgba(218, 212, 212, 0.6);
+    --four-color:rgb(49,153,94);
+    --five-color:rgba(33,147,176,1);
+    --sixth-color:rgba(33,147,176,1);
+    --seven-color:rgba(255,255,255,0.4);
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+
+
+
+
+.darkMode{
+    --primary-color:#fff;
+    --secondary-color:#13192C;
+    --third-color:#181E30;
+    --four-color:#fff;
+    --five-color:rgba(7,33,60,0.6);
+    --sixth-color:rgba(7,33,60,0.6);
+    --seven-color:rgba(7,33,60,0.6);
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+.RecommendedArtist{
+    display: grid;
+    row-gap: 10px;
+    border-radius: 20px;
+    background-color: var(--seven-color);
+    position: absolute;
+    right: 20px;
+    top:640px;
+    height: 30%;
+    width: 25%;
+    box-shadow: 5px 5px 13px 5px linear-gradient(180deg,transparent 0%, var(--five-color) 100%);
+}
+.RecommendedArtist .recommendedArtistRow{
+    display: flex;
+    margin-left: 20px;
+    border-radius: 20px;
+    width: 65%;
+    height: 90%;
+    flex-direction: column;
+    overflow-y: scroll;
+    margin-top: 2px;
+}
+.RecommendedArtist .recommendedArtistRow .recommendedArt{
+    display: flex;
+    position: relative;
+    width: 98%;
+    min-height: 60%;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+.RecommendedArtist .recommendedArtistRow .recommendedArt .recommendedImage1{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-radius: 20px;
+    justify-content: center;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 5px 5px 13px 5px linear-gradient(180deg,transparent 0%, var(--five-color) 100%);
+}
+.RecommendedArtist .recommendedArtistRow .recommendedArt .recommendedImage1 .Artistinfo1{
+    background: rgb(252,254,255);
+    background: linear-gradient(180deg, transparent 0%, var(--sixth-color) 100%);
+    height: 100%;
+    width:100%;
+    position: absolute;
+    border-radius: 20px;
+    transition: all 0.5s;
+    display: none;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    overflow: hidden;
+}
+.RecommendedArtist .recommendedArtistRow .recommendedArt .recommendedImage1:hover .Artistinfo1{
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+.RecommendedArtist .recommendedArtistRow .recommendedArt .recommendedImage2 .Artistinfo2{
+    background: rgb(252,254,255);
+    background: linear-gradient(180deg, transparent 0%, var(--sixth-color) 100%);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    border-radius: 20px;
+    transition: all 0.5s;
+    overflow: hidden;
+    display: none;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+.RecommendedArtist .recommendedArtistRow .recommendedArt .recommendedImage2:hover .Artistinfo2{
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+.RecommendedArtist .recommendedArtistRow .recommendedArt .recommendedImage1 .Artistinfo1 p{
+    color: #fff;
+    font-size: 20px;
+    font-family: 'Poppins',sans-serif;
+    letter-spacing: 2px;
+    font-weight: 300;
+}
+.RecommendedArtist .recommendedArtistRow .recommendedArt .recommendedImage2 .Artistinfo2 p{
+    color: #fff;
+    font-size: 20px;
+    font-family: 'Poppins',sans-serif;
+    letter-spacing: 2px;
+    font-weight: 300;
+}
+.RecommendedArtist .recommendedArtistRow .recommendedArt .recommendedImage1 img{
+    object-fit: center;
+    width: inherit;
+    height: inherit;
+}
+.RecommendedArtist .recommendedArtistRow .recommendedArt .recommendedImage2{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    margin-left: 30px;
+    justify-content: center;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.5);
+}
+.RecommendedArtist .recommendedArtistRow .recommendedArt .recommendedImage2 img{
+    object-fit: center;
+    width: inherit;
+    height: inherit;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+.RecommendedArtist .recommendArtistTitle{
+    width: 650px;
+    height: 50px;
+    display: flex;
+    margin-top: 10px;
+    margin-left: 20px;
+    align-items: center;
+    border-radius: 20px;
+}
+.RecommendedArtist .recommendArtistTitle p{
+    color: var(--primary-color);
+    margin-left: 10px;
+    font-size: 30px;
+    font-family: 'Poppins',sans-serif;
+    font-weight: 400;
+}

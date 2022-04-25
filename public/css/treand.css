@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100&display=swap');
+:root{
+    --primary-color:rgb(27, 27, 27);
+    --secondary-color:rgba(255,255,255,0.8);
+    --third-color:rgba(218, 212, 212, 0.6);
+    --four-color:rgb(49,153,94);
+    --five-color:rgba(33,147,176,1);
+    --sixth-color:rgba(33,147,176,1);
+    --seven-color:rgba(255,255,255,0.4);
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+
+
+
+
+.darkMode{
+    --primary-color:#fff;
+    --secondary-color:#13192C;
+    --third-color:#181E30;
+    --four-color:#fff;
+    --five-color:rgba(7,33,60,0.6);
+    --sixth-color:rgba(7,33,60,0.6);
+    --seven-color:rgba(7,33,60,0.6);
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+.treanding{
+    height: 505px;
+    width: 84%;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    top: 100px;
+    right: 2px;
+}
+.treanding .treandinfo{
+    height: 505px;
+    width: 100%;
+    display: flex;
+    overflow:scroll;
+    flex-direction: row;
+    margin-right: 20px;
+}
+.treanding .treandinfo .treandimgArt{
+    height: 500px;
+    min-width:400px;
+    border-radius: 20px;
+    overflow: hidden;
+    position:relative;
+    margin-left: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 5px 13px 5px linear-gradient(180deg,transparent 0%, var(--five-color) 100%);
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+.treanding .treandinfo .treandimgArt img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+.treanding .treandinfo .treandimgArt .textinfo{
+    display: flex;
+    height: 80px;
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    width: 400px;
+}
+.treanding .treandinfo .treandimgArt .textinfo p{
+    font-family: 'Poppins',sans-serif;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-weight: 600;
+    color: white;
+}
+.treanding .treandinfo .treandimgArt .textinfo .divicon{
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    background-color: rgb(49,153,94);
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.treanding .treandinfo .treandimgArt .textinfo span{
+    color: white;
+    cursor: pointer;
+}
+.treandoverlay{
+    z-index: 1;
+    position: absolute;
+    height: 100%;
+    width: 400px;
+    background: rgb(252,254,255);
+    background: linear-gradient(180deg, transparent 0%, var(--sixth-color) 100%);
+}
